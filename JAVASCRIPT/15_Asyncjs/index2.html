@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="count">0</h1>
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+    </div>
+</body>
+<script>
+    const count = document.querySelector("#count");
+    let number = 0;
+    let start = document.querySelector("#start");
+    let stop = document.querySelector("#stop");
+    let intervalId = null;
+    function increment() {
+        number = number + 1;
+        count.innerHTML = number;
+    }
+    start.addEventListener('click', function () {
+        if (intervalId == null) {
+            intervalId = setInterval(increment, 1000);
+        }
+
+
+    })
+    stop.addEventListener('click', function () {
+        clearInterval(intervalId);
+        count.innerHTML = number;
+        intervalId = null;
+    })
+
+</script>
+
+</html>

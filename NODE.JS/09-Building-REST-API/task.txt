@@ -1,0 +1,15 @@
+REST API-JSON
+
+GET /users-HTML document Render
+GET /api/users-List all users JSON
+
+GET /users/{id}-Get a user by {id}
+Dynamic Path Parameters
+GET /api/users/:id
+:id->Variable | Dynamic
+
+POST /users-Create a new user
+
+PATCH /users/{id}-Update a user by {id}
+
+DELETE /users/{id}-Delete a user by {id}

@@ -1,0 +1,85 @@
+Request Recieved!
+ Time:Thu Jun 19 2025 00:39:27 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about?myname=aditya+soran&userid=1&rollno=3
+
+Request Recieved!
+ Time:Thu Jun 19 2025 00:40:59 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about?myname=aditya+soran&userid=1&rollno=3
+
+Request Recieved!
+ Time:Thu Jun 19 2025 00:41:34 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/
+
+Request Recieved!
+ Time:Thu Jun 19 2025 00:41:51 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about
+
+Request Recieved!
+ Time:Thu Jun 19 2025 00:42:59 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about
+
+Request Recieved!
+ Time:Thu Jun 19 2025 00:43:02 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/
+
+Request Recieved!
+ Time:Thu Jun 19 2025 00:43:41 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about?myname=aditya+soran&userid=2&rollno=3
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:01:49 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/signup
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:01:57 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/signup
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:02:04 GMT+0530 (India Standard Time)
+ Method:POST
+ Path:/signup
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:02:47 GMT+0530 (India Standard Time)
+ Method:POST
+ Path:/signup
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:05:06 GMT+0530 (India Standard Time)
+ Method:POST
+ Path:/signup
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:05:10 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/signup
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:05:19 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:05:30 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about/
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:05:36 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/about
+
+Request Recieved!
+ Time:Thu Jun 19 2025 01:05:44 GMT+0530 (India Standard Time)
+ Method:GET
+ Path:/signup
+

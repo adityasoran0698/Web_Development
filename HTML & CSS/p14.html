@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            background-color: beige;
+            display: flex;
+            width: 550px;
+        }
+
+        .boxLeft {
+            border: 2px solid black;
+            background-color: aqua;
+            width: 200px;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .boxRight {
+            border: 2px solid black;
+            background-color: yellow;
+            width: 200px;
+            margin: 5px;
+            padding: 5px;
+
+        }
+
+        p {
+            border: 1px solid black;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        @media(max-width:640px){
+            .container{
+              flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="boxLeft">
+            <p>Text 1</p>
+            <p>Text 2</p>
+        </div>
+        <div class="boxRight">
+            <img src="depositphotos_62210177-stock-photo-autumn-mountain-landscape.jpg" alt="img 1">
+        </div>
+    </div>
+</body>
+
+</html>

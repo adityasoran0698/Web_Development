@@ -1,0 +1,60 @@
+#heading{
+    border:1px solid black;
+    text-align: center;
+    background-color: rgb(114, 219, 23);
+    width: 25rem;
+    margin-top: 25px;
+    border-radius: 20px;
+}
+#bmidiv{
+    margin-top:20px;
+    background-color: beige;
+    border: 1px solid black;
+    padding: 20px;
+}
+#fdiv{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+#guide{
+    background-color: rgb(170, 255, 0);
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 20rem;
+    text-align: center;
+    border-radius: 20px;
+}
+#guidehead{
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+#results{
+    margin-top: 5px;
+    font-weight: bold;
+    color: rgb(255, 107, 1);
+}
+body{
+    background-color: rgb(9, 215, 136);
+}
+button{
+    width:8rem;
+    height:2rem;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(104, 242, 159);
+    border-radius: 10px;
+    transition: all;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+button:hover{
+    width: 8.3rem;
+    height:2.3rem;
+    font-size:22px ;
+}

@@ -1,0 +1,30 @@
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(54, 45, 45);
+}
+.otp{
+  margin-bottom: 10px;
+  font-size: 50px;
+  color: rgb(255, 145, 0);
+}
+button{
+  font-size:35px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aqua;
+  box-shadow: 3px 3px 15px 4px black;
+  cursor: pointer;
+  transition: all 0.2s;
+  color:rgb(29, 17, 189)
+}
+button:active{
+  transform: scale(0.95);
+}
+button:hover{
+  filter: drop-shadow(0px 0px 20px rgb(0, 51, 255));
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .welcome {
+
+            bottom: 100px;
+            color: brown;
+        }
+
+        .form {
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: 550;
+            background: linear-gradient(45deg, rgb(142, 142, 244), rgb(241, 173, 184));
+            height: 50%;
+            width: 45%;
+            font-size: 30px
+        }
+
+        button {
+            margin-bottom: 5px;
+            cursor: pointer;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: 550;
+            color: rgb(231, 25, 25);
+            font-size: 30px;
+            background-color: rgb(255, 218, 163);
+        }
+
+        .logout {
+            padding: 5px;
+            background-color: rgb(255, 119, 66);
+            color: rgb(44, 39, 39);
+        }
+
+        input {
+            border: 1px solid black;
+            padding: 4px;
+            font-size: 25px;
+
+            border-radius: 5px;
+        }
+
+        .usersdata {
+            position: relative;
+            left: 25rem;
+            bottom: 6rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h1>Welcome <%=user.email %>
+            </h1>
+        </div>
+
+
+
+        <form method="get" action="/logout"> <button type="submit" class="logout">Logout</button>
+        </form>
+        <div class="form">
+            <form method="post" action="/send">
+                <label>From: </label>
+                <input type="text" name="From"> <br><br>
+                <label>Type a Message: </label>
+                <input type="text" name="Message"> <br><br>
+                <label>To: </label>
+                <input type="text" name="To"> <br><br>
+                <button type="submit">Send</button>
+            </form>
+            <form method="get" action="/allmsgs">
+                <button type="submit">See messages</button>
+            </form>
+            <% if (user.role==="Admin" ) { %>
+                <form class="usersdata" method="get" action="/admin/allmsgs">
+                    <button type="submit">See All Data</button>
+                </form>
+                <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

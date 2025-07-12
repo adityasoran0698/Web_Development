@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .content{
+            font-size:20px;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 15px;
+            background-color:rgb(83, 217, 186);
+        }
+        #sum,#avg,#product,#largest,#smallest{
+            font-size: 15px;
+            border-radius: 10px;
+            padding: 6px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .content:hover{
+        background-color:  rgb(95, 225, 40);    
+        }
+        input[type='button']:hover{
+            background-color: #f3c546;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Simple Calculator</h1>
+
+        </div>
+        <div class="content">
+            <label for="num1">Enter First Number</label>
+        <input type="text" name="number1" id="num1">
+        <br><br>
+        <label for="num1">Enter Second Number</label>
+        <input type="text" name="number2" id="num2">
+        <br><br>
+        <label for="num1">Enter Third Number</label>
+        <input type="text" name="number3" id="num3">
+        <br><br>
+        <label for="res">Result</label>
+        <input type="text" id="res">
+        <br><br>
+        <input type="button" value="Sum" id="sum" onclick="calculate('sum')" >
+        <input type="button" value="Average" id="avg" onclick="calculate('avg')" >
+        <input type="button" value="Product" id="product" onclick="calculate('product')" >
+        <input type="button" value="Largest Number" id="largest" onclick="calculate('largest')" >
+        <input type="button" value="Smallest Number" id="smallest" onclick="calculate('smallest')" >
+        </div>
+   
+    
+</body>
+<script>
+    function calculate(op){
+    
+    let num1=parseInt(document.getElementById("num1").value);
+    let num2=parseInt(document.getElementById("num2").value);
+    let num3=parseInt(document.getElementById("num3").value);
+    if (isNaN(num1)||isNaN(num2)||isNaN(num3)) {
+            alert("Please enter valid numbers in all fields");
+            return;  
+        }
+    
+    if(op=='sum'){
+        document.getElementById('res').value=num1+num2+num3;
+    }
+    else if(op=='avg'){
+        document.getElementById('res').value=Math.floor((num1+num2+num3)/3);
+    }
+    else if(op=='product'){
+        document.getElementById('res').value=(num1*num2*num3);
+    }
+    else if(op=='largest'){
+        if(num1>num2&&num1>num3){
+            document.getElementById('res').value=num1;
+        }
+        else if(num2>num1&&num2>num3){
+            document.getElementById('res').value=num2;
+        
+        }
+        else{
+            document.getElementById('res').value=num3;
+        }
+        }
+    
+    else if(op=='smallest'){
+        if(num1<num2&&num1<num3){
+            document.getElementById('res').value=num1;
+        }
+        else if(num2<num1&&num2<num3){
+            document.getElementById('res').value=num2;
+        
+        }
+        else{
+            document.getElementById('res').value=num3;
+        }
+        }
+    }
+   
+    
+
+</script>
+</html>

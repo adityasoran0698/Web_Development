@@ -1,0 +1,23 @@
+// Version
+
+5.1.0
+
+1st part-> 4
+2nd part-> 1
+3rd part-> 0
+
+// 3rd part(Last part) - Minor Fixes (Minor Bugs and Improvements.)
+
+Latest Version: 5.1.0
+
+// 2nd part - Recommended Bug Fixes 
+(
+    Recommended for all users. Security fixes. 
+    Maybe some new features.
+)
+
+// 1st part - Major Changes
+(
+    Major changes, new features. Breaking Update.
+    Recommended for all users.
+)

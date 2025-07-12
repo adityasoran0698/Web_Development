@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: beige;
+            border: 5px solid black;
+            align-content: start;
+            /* flex-wrap: wrap; */
+        }
+
+        #cont1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        #cont2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        #cont3 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        #cont4 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 15px;
+        }
+
+        #cont5 {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            height: 2220px;
+            justify-content: center;
+        }
+
+        #cont6 {
+            display: flex;
+            flex-direction: row;
+            height: 1200px;
+            align-items: start;
+             align-items: end;
+            align-items: center;
+        
+        }
+        #cont7{
+            display: flex;
+            flex-direction: row;
+            height: 1200px;
+            justify-content:center;
+            align-items:center;
+        }
+        #cont8{
+            display: flex;
+            height: 1200px;
+            
+        }
+        
+
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 3px solid black;
+            margin: 15px;
+            
+            padding: 15px;
+        }
+
+        #box1 {
+            background-color: blue;
+            /* flex-shrink: 4;
+            flex-grow: 4; */
+        }
+
+        #box2 {
+            background-color: rgb(255, 77, 0);
+        }
+
+        #box3 {
+            background-color: rgb(0, 255, 225);
+        }
+
+        #box4 {
+            background-color: rgb(255, 0, 0);
+        }
+
+        .heading {
+            font-size: 60px
+        }
+        h2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Horizontal Main Margin:-</h1>
+    <h1>Centre</h1>
+    <div class="container" id="cont1">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+    <h1>space-between</h1>
+    <div class="container" id="cont2">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+
+    </div>
+    <h1>space-around</h1>
+    <div class="container" id="cont3">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+
+    </div>
+    <h1>space-evenly</h1>
+
+    <div class="container" id="cont4">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+
+    </div>
+    <br><br>
+    <h1 class="heading">Vertical Main Margin:-</h1>
+    <h1>Centre</h1>
+    <div class="container" id="cont5">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+
+    </div>
+    <br><br>
+    <h1 class="heading">Align Items:-</h1>
+    <h1>Centre</h1>
+    <div class="container" id="cont6">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+
+    </div>
+    <br><br>
+    <div class="container" id="cont7">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+
+    </div>
+    <br><br>
+    <div class="container" id="cont8">
+        <div class="box" id="box1"><h2>BOX 1</h2></div>
+        <div class="box" id="box2"><h2>BOX 2</h2></div>
+        <div class="box" id="box3"><h2>BOX 3</h2></div>
+        <div class="box" id="box4"><h2>BOX 4</h2></div>
+
+    </div>
+</body>
+
+</html>

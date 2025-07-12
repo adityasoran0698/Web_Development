@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form method="get" action="/admin/allmsgs">
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Sent By (User Name)</th>
+          <th>Sent To (Recipient Name)</th>
+          <th>Message Content</th>
+          <th>Date & Time of Sending</th>
+          <th>User's Email Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% msgs.forEach((msg,index)=> { %>
+          <tr>
+            <td>
+              <%= index+1 %>
+            </td>
+
+            <td>
+              <%= msg.From %>
+            </td>
+            <td>
+              <%= msg.To %>
+            </td>
+            <td>
+              <%= msg.Message %>
+            </td>
+            <td>
+              <% if (msg.MessageTrackTime && msg.MessageTrackTime.length> 0) { %>
+                <%= msg.MessageTrackTime[msg.MessageTrackTime.length - 1].timestamp %>
+                  <% } else { %>
+                    N/A
+                    <% } %>
+            </td>
+            <td>
+              <%= msg.createdByEmail %>
+
+            </td>
+           
+          </tr>
+          <% }) %>
+
+      </tbody>
+
+    </table>
+
+  </form>
+</body>
+
+</html>

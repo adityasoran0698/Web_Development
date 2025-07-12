@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello My name is Aditya Soran</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const changeName=function(){
+        document.querySelector("h1").innerHTML="Hello My name is ADITYA SORAN";
+    }
+    const time=setTimeout(changeName,3000);
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(time);
+        document.querySelector("h1").innerHTML="STOPPED!";
+    });  
+</script>
+</html>

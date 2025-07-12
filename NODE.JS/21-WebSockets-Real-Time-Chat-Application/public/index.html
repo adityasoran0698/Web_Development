@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .box {
+            border: 1px solid;
+            height: 80%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            margin-top: 5rem;
+        }
+
+        #messages {
+            border: 1px solid;
+            height: 60%;
+            width: 80%;
+            border: none;
+            box-shadow: 1px 1px 10px 2px grey;
+            border-radius: 10px;
+            /* padding: 10px; */
+
+        }
+
+        p {
+            background-color: rgb(98, 255, 255);
+            padding: 3px;
+            width: 100%;
+            margin-top: 5px;
+            font-size: 20px;
+
+
+
+        }
+
+        .box h1 {
+            margin-bottom: 3rem;
+        }
+
+        .box input {
+            font-size: 20px;
+            width: 60%;
+            padding: 3px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .box button {
+            font-size: 20px;
+            padding: 4px;
+            background-color: rgb(0, 149, 255);
+            border: none;
+            border-radius: 2px solid;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Chatting Application</h1>
+            <div id="messages"></div>
+
+            <input type="text" placeholder="Enter a Message" id="message">
+            <button id="send-btn"><i class="ri-send-plane-fill"></i>Send</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io()
+    const Sendbtn = document.querySelector("#send-btn")
+    const messageInput = document.querySelector("#message")
+    const allmessages = document.querySelector("#messages")
+    let username = ""
+    username = prompt("Enter user Name")
+    Sendbtn.addEventListener("click", function () {
+        const message = messageInput.value
+        socket.emit("user-message", {message, username})
+        messageInput.value = ""
+    })
+    socket.on("message", (data) => {
+        const p = document.createElement("p")
+        p.innerHTML = `${new Date().toLocaleTimeString()}-${data.username} ${data.message} `
+        allmessages.appendChild(p)
+    })
+</script>
+
+</html>

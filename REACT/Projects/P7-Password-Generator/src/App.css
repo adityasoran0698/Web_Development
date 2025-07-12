@@ -1,0 +1,12 @@
+h1{
+  color: white;
+  text-align: center;
+}
+.test{
+ display: flex;
+ flex-direction: column;
+  align-items: center;
+  justify-content: center;}
+.control{
+ 
+}

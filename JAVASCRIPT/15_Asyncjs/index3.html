@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>hello</div>
+</body>
+<script >
+    function sayname(){
+          setTimeout(()=>{
+            console.log("Aditya Soran");
+          },3000)
+    }
+    async function hello(){
+        console.log("A");
+        console.log("B");
+        console.log("C");
+        await sayname();
+        console.log("D");
+        console.log("E");
+    }
+    hello();
+    console.log("the end");
+    console.log("the end");
+    console.log("the end");
+</script>
+</html>

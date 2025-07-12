@@ -1,0 +1,5 @@
+Mon Jun 23 2025 18:42:16 GMT+0530 (India Standard Time): GET: /api/user
+Mon Jun 23 2025 18:42:52 GMT+0530 (India Standard Time): GET: /api/user
+Mon Jun 23 2025 18:42:58 GMT+0530 (India Standard Time): POST: /api/user
+Mon Jun 23 2025 18:43:07 GMT+0530 (India Standard Time): GET: /api/user
+Mon Jun 23 2025 18:43:21 GMT+0530 (India Standard Time): DELETE: /api/user/685952da21423a2faf0b7a9d
