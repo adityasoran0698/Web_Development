@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        h3 {
+
+            margin: 15px;
+            font-size: 23px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+
+
+        button {
+            margin: 15px;
+            width: 5rem;
+            background-color: rgb(56, 154, 251);
+            border: none;
+            border-radius: 4px;
+
+        }
+
+        .blogs {
+            box-shadow: 1px 1px 10px 2px rgb(142, 142, 142);
+            width: 340px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin: 2rem;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .blogs:hover {
+            box-shadow: 2px 2px 10px 3px black;
+            transform: scale(1.07);
+            border: none;
+        }
+
+        .view-btn {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            padding: 3px;
+        }
+
+        .view-btn:hover {
+            transform: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .coverimages {
+            width: 100%;
+            height: 60%;
+            overflow: hidden;
+        }
+
+        .coverimages img {
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <%- include('./partials/nav') %>
+            <% if (blogs.length===0) { %>
+                <h2 style="text-align: center; margin-top: 50px; font-size: 40px;">📝 No blogs found!</h2>
+                <h3 style="text-align: center; font-size: 37px;">Start by creating your first blog post.</h3>
+
+                <% } %>
+                    <div class="box">
+
+
+                        <% blogs.forEach(blog=> { %>
+                            <div class="blogs">
+                                <div class="coverimages">
+                                    <img src="<%= blog.coverImageURL %>" alt="" class="coverimage">
+                                </div>
+
+
+                                <h3>
+                                    <%= blog.title %>
+                                </h3>
+                                <button type="submit"><a href="/blog/<%= blog._id %>" class="view-btn">View</a></button>
+                            </div>
+                            <% }) %>
+                    </div>
+    </div>
+
+</body>
+
+</html>
